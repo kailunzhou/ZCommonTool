@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = "ZCommonTool"
-  spec.version          = "0.0.1"
+  spec.version          = "0.0.2"
   spec.license          = "MIT"
   
   spec.summary          = "ZCommonTool summary"
@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
   spec.swift_version    = "4.2"
   spec.homepage         = "https://github.com/kailunzhou/ZCommonTool"
   spec.author           = { "zklcode" => "372909335@qq.com" }
-  spec.source           = { :git => "https://github.com/kailunzhou/ZCommonTool.git", :tag => "0.0.1" }
+  spec.source           = { :git => "https://github.com/kailunzhou/ZCommonTool.git", :tag => "0.0.2" }
   
   spec.source_files     = "Classes", "Classes/**/*.{h,m,swift}"
   spec.dependency       "MJRefresh",      "~> 3.5.0"
