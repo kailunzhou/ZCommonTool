@@ -20,4 +20,19 @@ public extension Dictionary where Key: ExpressibleByStringLiteral, Value: Any {
         }
     }
 }
-
+///通知扩展
+public extension NotificationCenter {
+    static func addNotification(_ observer: Any, selector aSelector: Selector, name aName: NSNotification.Name?) {
+        self.default.addObserver(observer, selector: aSelector, name: aName, object: nil)
+    }
+    static func removeNotification(_ observer: Any, name aName: NSNotification.Name? = nil) {
+        if aName != nil {
+            self.default.removeObserver(self, name: aName, object: nil)
+        } else{
+            self.default.removeObserver(self)
+        }
+    }
+    static func postNotification(name: NSNotification.Name, userInfo: [AnyHashable : Any]?) {
+        self.default.post(name: name, object: nil, userInfo: userInfo)
+    }
+}

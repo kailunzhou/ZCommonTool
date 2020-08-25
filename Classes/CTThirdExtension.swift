@@ -5,7 +5,7 @@ import BRPickerView
 
 //MARK: ------------- MJRefresh
 public struct RefreshManager {
-    static func header(_ refresh: (() -> Void)?) -> MJRefreshNormalHeader? {
+    public static func header(_ refresh: (() -> Void)?) -> MJRefreshNormalHeader? {
         let mj_header = MJRefreshNormalHeader {
             refresh?()
         }
@@ -16,7 +16,7 @@ public struct RefreshManager {
         return mj_header
     }
     
-    static func footer(_ refresh: (() -> Void)?) -> MJRefreshAutoNormalFooter? {
+    public static func footer(_ refresh: (() -> Void)?) -> MJRefreshAutoNormalFooter? {
         let mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: {
             refresh?()
         })
