@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = "ZCommonTool"
-  spec.version          = "0.0.2"
+  spec.version          = "0.0.3"
   spec.license          = "MIT"
   
   spec.summary          = "ZCommonTool summary"
@@ -9,13 +9,13 @@ Pod::Spec.new do |spec|
   spec.swift_version    = "4.2"
   spec.homepage         = "https://github.com/kailunzhou/ZCommonTool"
   spec.author           = { "zklcode" => "372909335@qq.com" }
-  spec.source           = { :git => "https://github.com/kailunzhou/ZCommonTool.git", :tag => "0.0.2" }
+  spec.source           = { :git => "https://github.com/kailunzhou/ZCommonTool.git", :tag => "0.0.3" }
   spec.dependency       "MJRefresh",      "~> 3.5.0"
   spec.dependency       "MBProgressHUD",  "~> 1.2.0"
   spec.dependency       "BRPickerView",   "~> 2.6.8"
   
   spec.source_files     = "Classes", "Classes/**/*.{h,m,swift}"
-  spec.ios.resource_bundle = { 'CTResource' => 'ZCommonTool/Assets/*.png' }
+  spec.resource_bundles = { 'CTResource' => ['Assets/*.png'] }
   
   # spec.public_header_files = "Classes/**/*.h"
   # spec.exclude_files = "Classes/Exclude"
