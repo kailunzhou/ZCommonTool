@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   spec.dependency       "BRPickerView",   "~> 2.6.8"
   
   spec.source_files     = "Classes", "Classes/**/*.{h,m,swift}"
-  spec.resource_bundles = { 'Resource' => ['ZCommonTool/Assets/Resource/*.png'] }
+  spec.ios.resource_bundle = { 'CTResource' => 'ZCommonTool/Assets/*.png' }
   
   # spec.public_header_files = "Classes/**/*.h"
   # spec.exclude_files = "Classes/Exclude"
