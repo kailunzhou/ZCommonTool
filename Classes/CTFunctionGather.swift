@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 ///打印报文
 public func delog(filePath: String = #file, rowCount: Int = #line) {

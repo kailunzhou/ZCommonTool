@@ -10,12 +10,12 @@ Pod::Spec.new do |spec|
   spec.homepage         = "https://github.com/kailunzhou/ZCommonTool"
   spec.author           = { "zklcode" => "372909335@qq.com" }
   spec.source           = { :git => "https://github.com/kailunzhou/ZCommonTool.git", :tag => "0.0.2" }
-  
-  spec.source_files     = "Classes", "Classes/**/*.{h,m,swift}"
   spec.dependency       "MJRefresh",      "~> 3.5.0"
   spec.dependency       "MBProgressHUD",  "~> 1.2.0"
   spec.dependency       "BRPickerView",   "~> 2.6.8"
   
+  spec.source_files     = "Classes", "Classes/**/*.{h,m,swift}"
+  spec.resource_bundles = { 'Resource' => ['ZCommonTool/Assets/Resource/*.png'] }
   
   # spec.public_header_files = "Classes/**/*.h"
   # spec.exclude_files = "Classes/Exclude"
