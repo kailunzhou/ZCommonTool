@@ -10,7 +10,7 @@ open class CTPureH5Ctrl: UIViewController {
     }()
     lazy private var goBackBtn: UIBarButtonItem = {
         let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 44))
-        btn.setImage(UIImage(named: "other_arrow_left", CTPureH5Ctrl.self), for: .normal)
+        btn.setImage(UIImage(named: "naviback_arrowblack", CTPureH5Ctrl.self), for: .normal)
         btn.addTarget(self, action: #selector(backClick(_:)), for: .touchUpInside)
         btn.contentHorizontalAlignment = .left
         btn.tag = 1000
@@ -18,7 +18,7 @@ open class CTPureH5Ctrl: UIViewController {
     }()
     lazy private var cancelBtn: UIBarButtonItem = {
         let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 44))
-        btn.setImage(UIImage(named: "other_cancel", CTPureH5Ctrl.self), for: .normal)
+        btn.setImage(UIImage(named: "navicancel_black", CTPureH5Ctrl.self), for: .normal)
         btn.addTarget(self, action: #selector(backClick(_:)), for: .touchUpInside)
         btn.contentHorizontalAlignment = .left
         btn.tag = 1001
@@ -47,6 +47,7 @@ open class CTPureH5Ctrl: UIViewController {
         title = titletext
         navigationItem.leftBarButtonItems = [goBackBtn, cancelBtn]
         
+        view.backgroundColor = UIColor.white
         webView.frame = CGRect(x: 0, y: 0, width: ScreenW, height: ScreenH - NaviH - BottomSafeH)
         webView.backgroundColor = UIColor.white
         webView.allowsBackForwardNavigationGestures = true
