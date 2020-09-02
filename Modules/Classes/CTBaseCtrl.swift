@@ -3,7 +3,7 @@ import UIKit
 open class CTBaseCtrl: UIViewController {
     lazy open var CTBackBtn: UIBarButtonItem = {
         let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 64, height: 44))
-        btn.setImage(UIImage(named:"naviback_arrowblack"), for: UIControl.State())
+        btn.setImage(UIImage(named: "naviback_arrowblack", CTBaseCtrl.self), for: .normal)
         btn.addTarget(self, action: #selector(CTBackClick(_:)), for: .touchUpInside)
         btn.imageEdgeInsets = UIEdgeInsets(top: 0, left: -50, bottom: 0, right: 0)
         return UIBarButtonItem(customView: btn)
@@ -11,7 +11,7 @@ open class CTBaseCtrl: UIViewController {
     
     lazy open var CTWhiteBackBtn: UIBarButtonItem = {
         let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 64, height: 44))
-        btn.setImage(UIImage(named:"baijiantou"), for: UIControl.State())
+        btn.setImage(UIImage(named: "naviback_arrowwhite", CTBaseCtrl.self), for: .normal)
         btn.addTarget(self, action: #selector(CTBackClick(_:)), for: .touchUpInside)
         btn.imageEdgeInsets = UIEdgeInsets(top: 0, left: -50, bottom: 0, right: 0)
         return UIBarButtonItem(customView: btn)

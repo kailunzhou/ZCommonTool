@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   spec.dependency       "BRPickerView",   "~> 2.6.8"
   
   #spec.source_files     = "Classes", "Modules/Classes/**/*.{h,m,swift}"
-  #spec.resource_bundles = { 'CTResource' => ['Assets/*.png'] }
+  #spec.resource_bundles = { 'CTResource' => ['Modules/Assets/*.png'] }
   spec.source_files      = 'Modules/Classes/**/*'
   spec.resource          = ['Modules/Assets/*.xcassets']
   

@@ -137,3 +137,34 @@ public extension UIColor {
         }
     }
 }
+
+public extension UIImage {
+    convenience init?(named: String, _ c: AnyClass) {
+        self.init(named: named, in: Bundle(for: c), compatibleWith: nil)
+    }
+}
+
+open class XHTextField: UITextField {
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.borderStyle = .none
+        self.clearButtonMode = .whileEditing
+        self.font = UIFont.systemFont(ofSize: 19, weight: .medium)
+        self.textColor = UIColor(hexString: "333333")
+    }
+    
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        let clearBtn = self.value(forKey: "_clearButton") as? UIButton
+        clearBtn?.setImage(UIImage(named: "textfield_clearbtn", XHTextField.self), for: .normal)
+    }
+    
+    open override func clearButtonRect(forBounds bounds: CGRect) -> CGRect {
+        super.clearButtonRect(forBounds: bounds)
+        return CGRect(x: self.bounds.size.width - 24.0, y: self.bounds.size.height * 0.5 - 12.0, width: 24.0, height: 24.0)
+    }
+    
+    public required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
