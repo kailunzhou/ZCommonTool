@@ -51,7 +51,7 @@
             if(seconds == 0){
                 seconds = duration;
             }
-            NSString *strTime = [NSString stringWithFormat:@"%.2ld", seconds];
+            NSString *strTime = [NSString stringWithFormat:@"%2ld", seconds];
             dispatch_async(dispatch_get_main_queue(), ^{//根据自己需求设置倒计时显示
                 [self setTitle:[NSString stringWithFormat:@"%@s",strTime] forState:UIControlStateNormal];
                 [self setTitleColor: [UIColor lightGrayColor] forState:UIControlStateNormal];
